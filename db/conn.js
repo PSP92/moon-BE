@@ -30,7 +30,7 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 
 // PULL OUT ENVIRONMENTAL VARIABLE FROM PROCESS.ENV OBJECT
-const MONGODB_URI ="mongodb://localhost:27017/moonapi";
+const MONGODB_URI = process.env.MONGODB_URI;
 
 // Optional Configuration Object to Remove Mongo Deprecation Warnings
 const config = { useUnifiedTopology: true, useNewUrlParser: true };

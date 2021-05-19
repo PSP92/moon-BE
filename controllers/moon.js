@@ -29,7 +29,7 @@ router.get("/seed", async (req, res) => {
       // remove all places from database
       await Moon.remove({});
       // add the seed data to the database
-      await Moon.create(placeSeedData);
+      await Moon.create(seedData);
       // get full list of places to confirm seeding worked
       const moons = await Moon.find({});
       // return full list of places as JSON
